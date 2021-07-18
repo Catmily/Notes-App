@@ -4,13 +4,22 @@ import {useState} from "react";
 import {Note} from "./Note";
 // @ts-ignore
 import {Input} from "./Input";
+import {Button, Col} from "react-bootstrap";
 
-export const Notes = () => {
+export type NormalProps = {
+    actionButton: (person: string) => void;
+    cat: string
+}
+
+export const Notes = ({actionButton, cat}: NormalProps) => {
 
     const [notes, setNotes] = useState<string[]>([]);
 
     const addNote = (note: string) => {
-        setNotes([...notes, note]);
+        if (note != "" && !notes.includes(note))
+        {
+        setNotes([...notes, note])
+        };
     }
 
     const removeNote = (note: string) => {
@@ -26,15 +35,19 @@ export const Notes = () => {
         setNotes([...notes]);
     }
 
-        return (<div>
-            {
+        return (
+            <Col><div>
+            <h1>{cat}</h1>
+                <Button className={"addButton"} onClick={() => actionButton(cat)}>Remove Category</Button>
+
+                <Input actionButton={addNote} inputText={"Note"}/>
+
+                {
 
                 notes.map(index => (
                     <Note note={index} actionButton={removeNote}/>)
                 )
             }
-            {
-                <Input actionButton={addNote}/>
-            }
-        </div>)
+            </div></Col>
+        )
     }
