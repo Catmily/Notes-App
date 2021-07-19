@@ -1,4 +1,13 @@
+@use 'sass:color';
+
 @import "~bootstrap/scss/bootstrap";
+
+$noteColorBlue : lightskyblue;
+$noteColorPink : lightpink;
+$noteColorOrange : orange;
+$noteColorPurple : mediumpurple;
+$noteColorYellow : #FFFF99;
+
 
 %Note {
   padding: 20px;
@@ -7,35 +16,86 @@
 
 .NoteBlue {
   @extend %Note;
-  background: lightskyblue;
+  background: $noteColorBlue;
   color: #000;
-  border-color: lightskyblue;
+  border-color: $noteColorBlue;
 }
 
 .NotePink {
   @extend %Note;
-  background: lightpink;
-  border-color: lightpink;
+  background: $noteColorPink;
+  border-color: $noteColorPink;
   color: #000;
 }
 
 .NoteOrange {
   @extend %Note;
-  background: orange;
-  border-color: orange;
+  background: $noteColorOrange;
+  border-color: $noteColorOrange;
   color: #000;
 }
 
 .NotePurple {
   @extend %Note;
-  background: mediumpurple;
-  border-color: mediumpurple;
+  background: $noteColorPurple;
+  border-color: $noteColorPurple;
   color: #000;
 }
 
 .NoteYellow {
   @extend %Note;
-  background: yellow;
-  border-color: yellow;
+  background: $noteColorYellow;
+  border-color: $noteColorYellow;
   color: #000;
+}
+
+.colorAddYellow {
+  min-width: 40px;
+  min-height: 40px;
+  background-color: $noteColorYellow;
+}
+
+.colorAddYellow:hover, .colorAddYellow:focus {
+  background-color: lighten($noteColorYellow, 10);
+}
+
+.colorAddPink {
+  min-width: 40px;
+  min-height: 40px;
+  background-color: $noteColorPink;
+}
+
+.colorAddPink:hover, .colorAddPink:focus  {
+  background-color: lighten($noteColorPink, 10);
+}
+
+.colorAddBlue {
+  min-width: 40px;
+  min-height: 40px;
+  background-color: $noteColorBlue;
+}
+
+.colorAddBlue:hover, .colorAddBlue:focus {
+  background-color: lighten($noteColorBlue, 10);
+}
+
+.colorAddOrange, {
+  min-width: 40px;
+  min-height: 40px;
+  background-color: $noteColorOrange;
+}
+
+.colorAddOrange:hover, .colorAddOrange:focus {
+  background-color: lighten($noteColorOrange, 10);
+}
+
+.colorAddPurple,   {
+  min-width: 40px;
+  min-height: 40px;
+  background-color: $noteColorPurple;
+}
+
+
+.colorAddPurple:hover, .colorAddPurple:focus {
+  background-color: lighten($noteColorPurple, 10);
 }

@@ -25,11 +25,11 @@ export const Note = (props : NormalProps) => {
 
     return <div className={color}><p>{props.note}</p>
         <Button className={"addButton"} onClick={() => props.actionButton(props.note)}>Remove Note</Button>
-        <Button className={"colorAdd"} onClick={() => changeColor(Color.YELLOW)}>Yellow</Button>
-        <Button className={"colorAdd"} onClick={() => changeColor(Color.BLUE)}>Blue</Button>
-        <Button className={"colorAdd"} onClick={() => changeColor(Color.ORANGE)}>Orange</Button>
-        <Button className={"colorAdd"} onClick={() => changeColor(Color.PURPLE)}>Purple</Button>
-        <Button className={"colorAdd"} onClick={() => changeColor(Color.PINK)}>Pink</Button>
+        <Button className={"colorAddYellow"} onClick={() => changeColor(Color.YELLOW)}> </Button>
+        <Button className={"colorAddBlue"} onClick={() => changeColor(Color.BLUE)}></Button>
+        <Button className={"colorAddOrange"} onClick={() => changeColor(Color.ORANGE)}></Button>
+        <Button className={"colorAddPurple"} onClick={() => changeColor(Color.PURPLE)}></Button>
+        <Button className={"colorAddPink"} onClick={() => changeColor(Color.PINK)}></Button>
 
     </div>
 }
