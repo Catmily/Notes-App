@@ -1,1 +1,41 @@
 @import "~bootstrap/scss/bootstrap";
+
+%Note {
+  padding: 20px;
+  border-radius: 7px;
+}
+
+.NoteBlue {
+  @extend %Note;
+  background: lightskyblue;
+  color: #000;
+  border-color: lightskyblue;
+}
+
+.NotePink {
+  @extend %Note;
+  background: lightpink;
+  border-color: lightpink;
+  color: #000;
+}
+
+.NoteOrange {
+  @extend %Note;
+  background: orange;
+  border-color: orange;
+  color: #000;
+}
+
+.NotePurple {
+  @extend %Note;
+  background: mediumpurple;
+  border-color: mediumpurple;
+  color: #000;
+}
+
+.NoteYellow {
+  @extend %Note;
+  background: yellow;
+  border-color: yellow;
+  color: #000;
+}
